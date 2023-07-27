@@ -10,13 +10,20 @@ let lastFrameTime
 let spineData
 let fps
 
-const BINARY_PATH = '/assets/Akane_home.skel'
-const ATLAS_PATH = '/assets/Akane_home@2x.atlas'
-const WELCOME_ANIMATION = 'Start_Idle_01'
+const CHARACTER = "Fuuka"
+const SKIP_INTRO = false
+const BINARY_PATH = `/assets/${CHARACTER}/${CHARACTER}_home.skel`
+const ATLAS_PATH = `/assets/${CHARACTER}/${CHARACTER}_home.atlas`
+
+let WELCOME_ANIMATION = 'Start_Idle_01'
 const LOOPING_ANIMATION = 'Idle_01'
 
-let customScale = 1.7
-let targetFps = 144
+if (SKIP_INTRO) {
+    WELCOME_ANIMATION = LOOPING_ANIMATION
+}
+
+let customScale = 2.5
+let targetFps = 60
 
 function init() {
     // Wallpaper Engine settings
@@ -157,6 +164,7 @@ function render() {
 function resize() {
     let w = canvas.clientWidth
     let h = canvas.clientHeight
+
     if (canvas.width != w || canvas.height != h) {
         canvas.width = w
         canvas.height = h
@@ -173,6 +181,13 @@ function resize() {
     scale = scale / customScale
     let width = canvas.width * scale
     let height = canvas.height * scale
+
+    // Custom offset for character
+    if (CHARACTER === "Fuuka") {
+        centerX -= 620
+        centerY -= 700
+
+    }
 
     mvp.ortho2d(centerX - width / 2, centerY - height / 2, width, height)
     gl.viewport(0, 0, canvas.width, canvas.height)
@@ -206,4 +221,6 @@ window.addEventListener('load', function () {
     }
 })
 
-console.log("https://github.com/SaltyAom/akane")
+
+console.log("Forked from: https://github.com/SaltyAom/akane")
+console.log("Fuuka version: https://github.com/xjunko/fuuka")
