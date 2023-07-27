@@ -22,7 +22,7 @@ if (SKIP_INTRO) {
     WELCOME_ANIMATION = LOOPING_ANIMATION
 }
 
-let customScale = 2.5
+let customScale = 2.6
 let targetFps = 144
 
 function init() {
