@@ -23,7 +23,7 @@ if (SKIP_INTRO) {
 }
 
 let customScale = 2.5
-let targetFps = 60
+let targetFps = 144
 
 function init() {
     // Wallpaper Engine settings
