@@ -1,6 +1,6 @@
 # Blue Archive Fuuka Live 2D
 Blue Archive Fuuka Live 2D running on web at 4K 144 fps.
-Running at [fuuka.konno.tk](https://fuuka.konno.tk)
+Live at [here](https://fuuka.live2d.konno.ovh)
 
 ![Fuuka](https://raw.githubusercontent.com/xjunko/fuuka/main/assets/Fuuka/preview.png)
 
